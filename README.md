@@ -30,3 +30,10 @@ Health-check: http://localhost/health
     [ Браузер ] --80--> [ Nginx ] --backend--> [ Python app:8080 ]
 
 Приложение не доступно снаружи, только через Nginx внутри Docker-сети.
+
+## Troubleshooting
+
+### docker pull падает с ошибкой "server gave HTTP response to HTTPS client"
+
+Если Docker Desktop наследует кривой системный прокси, pull из Docker Hub ломается.
+Решение: Docker Desktop → Settings → Resources → Proxies → Proxy mode → **No proxy**.
