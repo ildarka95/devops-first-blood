@@ -5,7 +5,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(b"I am broken\n")
+        self.wfile.write(b"Hello, DevOps. I am alive and dangerous.\n")
 
 if __name__ == '__main__':
     server = HTTPServer(('0.0.0.0', 8080), Handler)
